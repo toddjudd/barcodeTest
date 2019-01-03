@@ -7,7 +7,7 @@ import time
 import cv2
 
 #argparser
-ap = argparser.ArgumentParser()
+ap = argparse.ArgumentParser()
 ap.add_argument("-o", "--output", type=str, default="barcodes.csv", help="path to output CSV file containing barcodes")
 args = vars(ap.parse_args())
 
