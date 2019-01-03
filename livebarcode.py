@@ -47,7 +47,7 @@ while True:
 
     #if barcode text not in csv write to csv
     if barcodeData not in found():
-      csv.write("{},{},{}\n".format(datetime.datetime.now(), barcodeData, barcodeType)
+      csv.write("{},{},{}\n".format(datetime.datetime.now(), barcodeData, barcodeType))
       csv.flush()
       found.add(barcodeData)
   #show output frame
