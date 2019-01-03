@@ -12,7 +12,7 @@ ap.add_argument("-o", "--output", type=str, default="barcodes.csv", help="path t
 args = vars(ap.parse_args())
 
 #init vid stream - wait for warm up
-print("[Info] starting video stream...")
+print("[Info] starting video stream...")4
 vs = VideoStream(usePiCamera=True).start()
 time.sleep(2.0)
 
