@@ -26,6 +26,9 @@ while True:
   frame = vs.read()
   frame = imutils.resize(frame, width=400)
 
+  #cl to frame
+  cv2.putText(frame, "TEST", (10, 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,255,0), 2)
+
   #find barcodes and decode
   barcodes = pyzbar.decode(frame)
   for barcode in barcodes:
