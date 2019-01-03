@@ -1,6 +1,7 @@
 from pyzbar import pyzbar
 import argparse
 import cv2
+import imutils
 
 #argparse
 ap = argparse.ArgumentParser()
@@ -9,6 +10,7 @@ args = vars(ap.parse_args())
 
 #load image
 img = cv2.imread(args["image"])
+img = imutils.resize(frame, width=400)
 
 #find barcodes
 barcodes=pyzbar.decode(img)
