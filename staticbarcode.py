@@ -14,7 +14,7 @@ img = cv2.imread(args["image"])
 barcodes=pyzbar.decode(img)
 
 #loop over barcodes
-for barcodes in barcodes:
+for barcode in barcodes:
   #find bounds of barcode in image
   #draw box around barcode in image
   (x,y,w,h) = barcode.rect
