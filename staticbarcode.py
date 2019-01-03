@@ -11,14 +11,14 @@ args = vars(ap.parse_args())
 img = cv2.imread(args["image"])
 
 #find barcodes
-barcodes=pyzbar.decode(image)
+barcodes=pyzbar.decode(img)
 
 #loop over barcodes
 for barcodes in barcodes:
   #find bounds of barcode in image
   #draw box around barcode in image
   (x,y,w,h) = barcode.rect
-  cv2.rectangle(image, (x,y), (x+w, y+h), (0,255,0), 2)
+  cv2.rectangle(img, (x,y), (x+w, y+h), (0,255,0), 2)
 
   #barcode date is a bytes obj must convert to string
   barcodeData = barcode.data.decode("utf-8")
