@@ -40,7 +40,7 @@ while True:
 
     #draw barcode data and type on image
     text = "{} ({})".format(barcodeData, barcodeType)
-    cv2.putText(img, text, (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,255,0), 2)
+    cv2.putText(frame, text, (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,255,0), 2)
 
     #print the barcode and type to terminalk
     print("[INFO] found {} barcode: {}".format(barcodeType, barcodeData))
