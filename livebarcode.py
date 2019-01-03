@@ -24,7 +24,7 @@ found = set()
 while True:
   #get frame and resize to max width of 400px
   frame = vs.read()
-  frame = imutils.resize(frame, width=400)
+  frame = imutils.resize(frame, width=800)
 
   #cl to frame
   cv2.putText(frame, "TEST", (10, 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,255,0), 2)

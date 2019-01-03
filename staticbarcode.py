@@ -10,7 +10,7 @@ args = vars(ap.parse_args())
 
 #load image
 img = cv2.imread(args["image"])
-img = imutils.resize(img, width=400)
+img = imutils.resize(img, width=800)
 
 #find barcodes
 barcodes=pyzbar.decode(img)
