@@ -13,7 +13,8 @@ args = vars(ap.parse_args())
 
 #init vid stream - wait for warm up
 print("[Info] starting video stream...")
-vs = VideoStream(usePiCamera=True).start()
+vs = VideoStream(src=0).start()
+# vs = VideoStream(usePiCamera=True).start()
 time.sleep(2.0)
 
 #open output csv and initialize barcode set
